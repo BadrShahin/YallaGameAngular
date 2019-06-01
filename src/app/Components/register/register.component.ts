@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators, FormGroup } from '@angular/forms';
 import { PasswordValidation } from '../../validations/validators';
+import { Router } from '@angular/router';
+import { AuthLoginService } from '../../services/auth-login.service';
 
 
 @Component({
@@ -12,7 +14,8 @@ export class RegisterComponent implements OnInit {
 users=["Person","Place"];
 countries=['Egypt'];
 cities=['Ismailia','Suez','Port-Said','Cairo'];
-  constructor() { }
+  constructor( private router: Router, 
+    private authService: AuthLoginService) { }
   form = new FormGroup({
     email : new FormControl('', [Validators.required, Validators.email]),
     username : new FormControl('',[Validators.required]),
@@ -68,7 +71,13 @@ cities=['Ismailia','Suez','Port-Said','Cairo'];
   }
   
   signup(){
-    
+    this.authService.login(this.getEmail().value, this.getPassword().value)
+      .subscribe(result => { 
+        // if (result)
+          this.router.navigate(['/']);
+        // else  
+        //   this.invalidLogin = true; 
+      });
   }
 
   ngOnInit() {

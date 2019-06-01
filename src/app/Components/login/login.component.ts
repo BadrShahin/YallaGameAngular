@@ -11,7 +11,7 @@ import { AuthLoginService } from '../../services/auth-login.service';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private route: Router,
+  constructor(
     private router: Router, 
     private authService: AuthLoginService) { }
 
@@ -24,9 +24,7 @@ export class LoginComponent implements OnInit {
     password : new FormControl('',[Validators.required]),
   })
 
-  navigate(){
-    this.route.navigate(['/location']);
-  }
+
 
   getEmail(){
    return this.form.get('email');

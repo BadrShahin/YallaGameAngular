@@ -1,7 +1,7 @@
 <div id="container" class="mx-auto">
     
   <div id="nav">
-      <img src="assets\images\yallagame2.png"/>
+      <img id="logo" src="assets\images\yallagame2.png"/>
       <a class="navA" style="color: white" routerLink="">Login</a>
       <a class="navA" style="color: white" routerLink="/register">Register</a>
       
@@ -13,10 +13,7 @@
       <mat-tab-group mat-align-tabs="center" dynamicHeight>
         <mat-tab label="Login as Preson">
           <form [formGroup]='form' (ngSubmit)="signIn()">
-          <mat-icon id="profile" >account_circle</mat-icon>
-            
-            <br>
-            <br>
+              <img id="profile" src="assets\images\logo.png"/>
             <h4><span>Person Login</span></h4>
             
             <mat-form-field>
@@ -39,9 +36,9 @@
         </mat-tab>
 
         <mat-tab label="Login as Place"><form [formGroup]='form' (ngSubmit)="signIn()">
-          <mat-icon id="profile" >account_circle</mat-icon>
-          <br>
-          <br>
+            <img id="profile" src="assets\images\logo.png"/>
+          
+          
           <h4><span>Place Login</span></h4>
           
           <mat-form-field>

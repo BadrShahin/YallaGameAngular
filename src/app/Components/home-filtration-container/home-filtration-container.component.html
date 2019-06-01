@@ -1,16 +1,22 @@
-<div class="container">
-  <div class="row d-flex py-2 bg-dark" style="color:white"  >
-    <p style="flex-grow: 2">Places in <i> Ismaillia </i> <!-- <i>{{user_selected_city}}</i> --></p>
-    <button class="btn btn-light text-center bg-transparent" style="flex-grow: 1; border: none; color: white" id="change_area" onclick="">Change Area</button>
+<div>
+  <!-- <div class="row d-flex py-2 bg-dark" style="color:white"  >
+    <p style="flex-grow: 2">Places in <i> Ismaillia </i> <i>{{user_selected_city}}</i></p>
+    <! <button class="btn btn-light text-center bg-transparent" style="flex-grow: 1; border: none; color: white" id="change_area" onclick="">Change Area</button>
     <div style="flex-grow: 2; align-content: flex-end; align-items: flex-end">
       <img src="https://picsum.photos/200/300" id="profile_image" />
-    </div>
-  </div>
-  <div class="row">
+    </div> -->
+    
+  <!-- </div> -->
+  <app-nav></app-nav>
+  <p class="m-2" style="flex-grow: 2">Places in <i> Ismaillia </i> <i>{{user_selected_city}}</i></p>
+
+
+
+  <div class="row m-2">
     <div class="col-md-3">
       <app-filtration></app-filtration>
     </div>
-    <div class="col-md-9">
+    <div class="col-md-9 p-0 m-0">
       <app-home></app-home>
     </div>
   </div>
